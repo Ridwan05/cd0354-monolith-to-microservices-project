@@ -1,0 +1,13 @@
+apiVersion: v1 
+data:
+  POSTGRES_DB: postgres
+  POSTGRES_HOST: ridproject3.ccsoez3y2rln.us-east-1.rds.amazonaws.com
+  AWS_REGION: us-east-1
+  AWS_PROFILE: default
+  AWS_BUCKET: arn:aws:s3:::ridproject3
+  JWT_SECRET: testing
+  URL: "http://localhost:8100"
+kind: ConfigMap 
+metadata:
+  name: myconfigmap
+  
