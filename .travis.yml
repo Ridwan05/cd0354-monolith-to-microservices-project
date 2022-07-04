@@ -36,4 +36,4 @@ after_success:
   - docker push ridwan05/udagram-api-feed
   - docker push ridwan05/udagram-api-user
   - docker push ridwan05/udagram-frontend
-  - docker push ridwan05/reverseproxy
+  - docker push ridwan05/udagram-reverseproxy
