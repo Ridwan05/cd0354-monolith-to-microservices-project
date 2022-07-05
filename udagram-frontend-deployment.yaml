@@ -1,22 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: udagram-api-feed
+  name: udagram-frontend
   labels:
-    app: udagram-api-feed
+    app: udagram-frontend
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: udagram-api-feed
+      app: udagram-frontend
   template:
     metadata:
       labels:
-        app: udagram-api-feed
+        app: udagram-frontend
     spec:
       containers:
-      - name: udagram-api-feed
-        image: ridwan05/udagram-api-feed
+      - name: udagram-frontend
+        image: ridwan05/udagram-frontend
         ports:
         - containerPort: 8080
         livenessProbe:
@@ -28,23 +28,22 @@ spec:
 
 
 
-
 # apiVersion: extensions/v1beta1
 # kind: Deployment
 # metadata:
 #   labels:
-#     service: udagram-api-feed
-#   name: udagram-api-feed
+#     service: udagram-frontend
+#   name: udagram-frontend
 # spec:
 #   replicas: 2
 #   template:
 #     metadata:
 #       labels:
-#         service: udagram-api-feed
+#         service: udagram-frontend
 #     spec:
 #       containers:
-#       - image: ridwan05/udagram-api-feed
-#         name: udagram-api-feed
+#       - image: ridwan05/udagram-frontend 
+#         name: udagram-frontend
 #         imagePullPolicy: Always          
 #         resources:
 #           requests:
@@ -56,7 +55,6 @@ spec:
 #         ports:
 #         - containerPort: 8080
 #       restartPolicy: Always
-
 
 
 
